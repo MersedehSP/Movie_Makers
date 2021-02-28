@@ -10,16 +10,25 @@
 </head>
 <body>
     
+    <!-- Globe content -->
     <div class="image-container">
+
+        <!-- Globe  image -->
         <img class="circle-img" src="../static/images/blue-grunge-free-vector-texture.jpg">
+        <!-- Globe  transparent cover -->
         <div class='circle-cover'></div>
+
+        <!-- Globe text -->
         <div class='stone-content'>
-            <p class="line-1 anim-typewriter stone" id="starting-phrase">Ready to predict?</p>
+
+            <!-- Initial startup content -->
+            <p class="stone" id="starting-phrase">Ready to predict?</p>
             <button class='stone' id ="prediction-submit-btn" type="button">PREDICT</button>
 
-            <p class="line-1 anim-typewriter stone" id="budget-phrase">What is your budget?</p>
+            <!-- Budget phrase -->
+            <p class="stone" id="budget-phrase">What is your budget?</p>
            
-            
+            <!-- Budget options -->
             <select name="budget" class='stone' id="budget-selection" name="budget-selection">
                 <option value="" selected>Choose Budget</option>
                 <option value="&lt100K">&lt100K</option>
@@ -28,18 +37,26 @@
                 <option value="10M-100M">10M-100M</option>
                 <option value="100M-1B">100M-1B</option>
             </select>
+            <!-- Submit Budget -->
             <button class='stone' id ="budget-submit-btn" type="button">NEXT</button>
     
-            <p class="line-1 anim-typewriter stone" id="duration-phrase">What is the duration of the film?</p>
+            <!-- Duration phrase -->
+            <p class="stone" id="duration-phrase">What is the duration of the film?</p>
+            <!-- Duration Input -->
             <input type="number" class='stone' id="duration-selection" name="quantity" min="30" max="50">
+            <!-- Submit Duration -->
             <button class='stone' id ="duration-submit-btn" type="button">NEXT</button>
 
-            <p class="line-1 anim-typewriter stone" id="results">NOT SUCCESSFUL</p>
+            <!-- Results content -->
+            <p class="stone" id="results">NOT SUCCESSFUL</p>
+            <!-- Continue Button - allows you to Go back to the start  -->
             <button class="stone" id="next-movie-search">CONTINUE</button>
     
             <!-- <button class='btn'>Ready</button> -->
         </div>
     </div>
+
+    <!-- About content -->
     <div class="content-holder">
         <h1>Movie Sorcerer</h1>
         <p class="about">Lorem ipsum dolor sit amet, consectetur adipiscing elitPosuere lorem ipsum doloAenean sed adipiscing diam donec. Dictumst quisque sagittis purus sit amet volutpat consequat mauris. Risus pretium quam vulputate dignissim.</p>
