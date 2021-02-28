@@ -28,7 +28,7 @@
 
 <p>Click button to make final selection.</p>
 
-<button type="button" onclick="myFunction()">Try it</button>
+<button type="button" onclick="myFunction()">Submit</button>
 
 <script>
 function myFunction() {
@@ -39,8 +39,8 @@ function myFunction() {
     inputData[budget]=1;
 
     console.log("InputData :",inputData);
-    console.log("Duration Selection :",duration);
     console.log("Budget :",budget);
+    console.log("Duration Selection :",duration);
     $.post("/modelResults",{"inputData":inputData}).done(function(data){
         console.log("Data :",data);
     });
