@@ -64,7 +64,27 @@ html{
     
 }
 #visuals-btn{
+    
     color:white;
+    margin-left: 35%;
+    margin-top: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 90%;
+    padding: 10px;
+    width: 150px;
+    /* background: linear-gradient(180deg, rgb(47, 206, 255),  rgb(9, 0, 128)); */
+    background: transparent;
+    border-bottom: solid 2px rgb(234, 250, 255);
+    color:rgb(245, 245, 222);
+    cursor:pointer;
+}
+
+a{
+    text-decoration: none;
+    color:rgb(245, 245, 222);
 }
 
 .circle-img{
