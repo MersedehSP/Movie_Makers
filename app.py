@@ -2,7 +2,7 @@ import json
 import random
 import time
 import pandas as pd
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, request, jsonify
 # Flask Setup
 app =  Flask(__name__)
 
@@ -12,8 +12,9 @@ def home():
 
     return render_template("index.html")
 
-@app.route("???")
-def output1():
+@app.route('/modelResults', methods=['POST'])
+def modelResults():
+    
     return jsonify()
     
 if __name__=="__main__":

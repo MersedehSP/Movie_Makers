@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+<html>
+<body>
+
+<form>
+    Select duration of movie to produce in minutes:
+    <select id="myDuration">
+        <option value="5">0 - 30</option>
+        <option value="6">30 - 60</option>
+        <option value="7">60 - 90</option>
+        <option value="8">90 - 120</option>
+        <option value="9">120 - 305</option>
+    </select>
+
+    Select the budget  of movie to produce in dollars:
+    <select id="myBudget">
+        <option value="0">0 - 100k</option>
+        <option value="1">100k - 1 million</option>
+        <option value="2">1 million - 10 million</option>
+        <option value="3">10 million - 100 million</option>
+        <option value="4">100 million - 1 Billion</option>
+    </select>
+
+</form>
+
+<p>Click button to make final selection.</p>
+
+<button type="button" onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+    var inputData=[0,0,0,0,0,0,0,0,0,0,]
+    var duration = document.getElementById("myDuration").value;
+    var budget = document.getElementById("myBudget").value;
+    inputData[duration]=1;
+    inputData[budget]=1;
+
+    console.log("InputData :",inputData);
+    console.log("Duration Selection :",duration);
+    console.log("Budget :",budget);
+    $.post("/modelResults",{"inputData":inputData}).done(function(data){
+        console.log("Data :",data);
+    });
+
+}
+</script>
+
+</body>
+</html>
