@@ -172,7 +172,7 @@ a{
     width: 150px;
     /* background: linear-gradient(180deg, rgb(47, 206, 255),  rgb(9, 0, 128)); */
     background: transparent;
-    border: solid 2px rgb(234, 250, 255);
+    border: solid 1px rgb(234, 250, 255);  
     color:rgb(245, 245, 222);
     cursor:pointer;
 }

@@ -51,16 +51,6 @@ $("#next-movie-search").on('click',function(e){
    
 })
 
-// function submitForm() {
-//     console.log($(this).serializeArray());
-
-//     var frm = $('form[name="movie-details"');
-    
-//     frm.submit(); // Submit the form
-//     frm.reset();  // Reset all form data
-//     event.pre
-//  }
-
 
 
 
