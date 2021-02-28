@@ -32,13 +32,12 @@
                 <p class="stone" id="budget-phrase">What is your budget?</p>
             
                 <!-- Budget options -->
-                <select name="budget" class='stone' id="budget-selection" name="budget-selection">
-                    <option value="" selected>Choose Budget</option>
-                    <option value="&lt100K">&lt100K</option>
-                    <option value="100K-1M">100K-1M</option>
-                    <option value="1M-10M">1M-10M</option>
-                    <option value="10M-100M">10M-100M</option>
-                    <option value="100M-1B">100M-1B</option>
+                <select class='stone' id="budget-selection">
+                    <option value="0">0 - 100k</option>
+                    <option value="1">100k - 1 million</option>
+                    <option value="2">1 million - 10 million</option>
+                    <option value="3">10 million - 100 million</option>
+                    <option value="4">100 million - 1 Billion</option>
                 </select>
                 <!-- Submit Budget -->
                 <button class='stone' id ="budget-submit-btn" type="button">NEXT</button>
@@ -46,7 +45,13 @@
                 <!-- Duration phrase -->
                 <p class="stone" id="duration-phrase">What is the duration of the film?</p>
                 <!-- Duration Input -->
-                <input type="number" class='stone' id="duration-selection" name="duration" min="60" max="10000">
+                <select id="duration-selection">
+                    <option value="5">0 - 30</option>
+                    <option value="6">30 - 60</option>
+                    <option value="7">60 - 90</option>
+                    <option value="8">90 - 120</option>
+                    <option value="9">120 - 305</option>
+                </select>
                 <!-- Submit Duration -->
                 
                 <button class='stone' id ="duration-submit-btn" type="submit" form="movie-details">SUBMIT</button>
@@ -55,7 +60,7 @@
             
 
             <!-- Results content -->
-            <p class="stone" id="results">NOT SUCCESSFUL</p>
+            <p class="stone" id="results"></p>
             <!-- Continue Button - allows you to Go back to the start  -->
             <button class="stone" id="next-movie-search" type="reset">CONTINUE</button>
     

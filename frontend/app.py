@@ -1,26 +1,29 @@
-from flask import flask, jsonify
+import json
+import pandas as pd
+from joblib import dump, load
+from flask import Flask, render_template, request, jsonify
+# Flask Setup
+app =  Flask(__name__)
 
-# Create an app, being sure to pass __name__
-app = Flask(__name__)
 
-
-movies = [{'Genre': 'Romance', 'Duration': '74', 'Budget': '25000000'}, {'Genre': 'Horror', 'Duration': '85', 'Budget': '60000'}, {'Genre': 'Action, Adventure, Comedy', 'Duration': '68', 'Budget': '5000000'}]
-
-# 3. Define what to do when a user hits the index route
-@app.route("/")
+@app.route('/')
 def home():
-    print("Server received request for 'Home' page...")
-    return "Welcome to my 'Home' page!"
 
-# 4. Define what to do when a user hits the /about route
-@app.route("/about")
-def about():
-    print("Server received request for 'About' page...")
-    return "Welcome to my 'About' page!"
+    return render_template("index.html")
 
-@app.route("/jsonified")
-def jsonified():
-    return jsonify(hello_dict)
-
-if __name__ == "__main__":
+@app.route('/modelResults', methods=['POST'])
+def modelResults():
+    X=[]
+    inputData = request.form.getlist("inputData[]")
+    inputData = [int(i) for i in inputData] 
+    X.append(inputData)
+    classifier = load('Final_ML_Model.joblib')
+    result=classifier.predict(X)
+    if (result==0):
+        outcome="Not Successful"
+    else:
+        outcome="Successful"
+    return outcome
+    
+if __name__=="__main__":
     app.run(debug=True)
