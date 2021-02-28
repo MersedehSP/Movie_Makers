@@ -3,22 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie makers</title>
+    <title>Movie Sorcerer</title>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <h1>This is the webpage</h1>
-    <div id="debug"></div>
-    <!-- <script>
-        fetch('./frontend/movies.json')
-            .then(response => response.json())
-            .then(data => {
-                var movies = (data['movies'])
-                for(var i = 0; i < movies.length; i++){
-                    console.log(movies[i]);
-                }
-            })
-    </script> -->
-    <script src="frontend/js/data.js"></script>
-    <script src="frontend/js/app.js"></script>
+    
+    <div class="image-container">
+        <img class="circle-img" src="../static/images/blue-grunge-free-vector-texture.jpg">
+        <div class='circle-cover'></div>
+        <div class='stone-content'>
+            <p class="line-1 anim-typewriter stone" id="starting-phrase">Ready to predict?</p>
+            <button class='stone' id ="prediction-submit-btn" type="button">PREDICT</button>
+
+            <p class="line-1 anim-typewriter stone" id="budget-phrase">What is your budget?</p>
+           
+            
+            <select name="budget" class='stone' id="budget-selection" name="budget-selection">
+                <option value="" selected>Choose Budget</option>
+                <option value="&lt100K">&lt100K</option>
+                <option value="100K-1M">100K-1M</option>
+                <option value="1M-10M">1M-10M</option>
+                <option value="10M-100M">10M-100M</option>
+                <option value="100M-1B">100M-1B</option>
+            </select>
+            <button class='stone' id ="budget-submit-btn" type="button">NEXT</button>
+    
+            <p class="line-1 anim-typewriter stone" id="duration-phrase">What is the duration of the film?</p>
+            <input type="number" class='stone' id="duration-selection" name="quantity" min="30" max="50">
+            <button class='stone' id ="duration-submit-btn" type="button">NEXT</button>
+
+            <p class="line-1 anim-typewriter stone" id="results">NOT SUCCESSFUL</p>
+            <button class="stone" id="next-movie-search">CONTINUE</button>
+    
+            <!-- <button class='btn'>Ready</button> -->
+        </div>
+    </div>
+    <div class="content-holder">
+        <h1>Movie Sorcerer</h1>
+        <p class="about">Lorem ipsum dolor sit amet, consectetur adipiscing elitPosuere lorem ipsum doloAenean sed adipiscing diam donec. Dictumst quisque sagittis purus sit amet volutpat consequat mauris. Risus pretium quam vulputate dignissim.</p>
+        <button class="stone" id="visuals-btn">VISUALS</button>
+
+    </div>
+
+
+    
+
+    <script src="../static/js/app.js"></script>
+    
+
+   
 </body>
 </html>
