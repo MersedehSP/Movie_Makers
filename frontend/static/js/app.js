@@ -14,36 +14,52 @@ $("#prediction-submit-btn").on('click',function(e){
 
 //Activate only the Duration  related elements
 $("#budget-submit-btn").on('click',function(e){
-    console.log('Submit Budget is pressed')
+
     $("#budget-phrase, #budget-selection, #budget-submit-btn").hide();
     $("#duration-phrase, #duration-submit-btn, #duration-selection").show();
 })
 
-// Retrieve the results a
-$("#duration-submit-btn").on('click',function(e){
+// final submission
+
+$("#movie-details").submit(function(e){
     console.log('Button is pressed to retrieve results')
 // Here ajax call need to be made to fetch json data and the below line will be deleted
+
+    // Retrieve input
+    var data = ( $("#movie-details").serializeArray() );
+    var budget = data[0].value; // Budget value
+    var duration = data[1].value; // duration value
+    console.log(budget, duration)
+   
+    $("#movie-details").trigger("reset");  // Reset the values
+
+    // Hide the current section and display the next section
     $("#duration-phrase, #duration-submit-btn, #duration-selection").hide();
     $("#results, #next-movie-search").show();
+
+    e.preventDefault(); // prevent from refreshing
    
 })
 
 // Get back to the beginning
 $("#next-movie-search").on('click',function(e){
+   
     console.log('Continue  is pressed')
     $("#results,#next-movie-search").hide();
     $("#prediction-submit-btn, #starting-phrase").show();
-
+    e.preventDefault();
    
 })
 
-function submitForm() {
-  
-    var frm = $('form[name="movie-details"');
-    frm.submit(); // Submit the form
-    frm.reset();  // Reset all form data
-    return false; // Prevent page refresh
- }
+// function submitForm() {
+//     console.log($(this).serializeArray());
+
+//     var frm = $('form[name="movie-details"');
+    
+//     frm.submit(); // Submit the form
+//     frm.reset();  // Reset all form data
+//     event.pre
+//  }
 
 
 

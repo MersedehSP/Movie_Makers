@@ -26,7 +26,7 @@
             <button class='stone' id ="prediction-submit-btn" type="button">PREDICT</button>
 
             
-            <form name="movie-details" onclick="return false">
+            <form id="movie-details">
 
                 <!-- Budget phrase -->
                 <p class="stone" id="budget-phrase">What is your budget?</p>
@@ -48,10 +48,11 @@
                 <!-- Duration Input -->
                 <input type="number" class='stone' id="duration-selection" name="quantity" min="30" max="50">
                 <!-- Submit Duration -->
-                <button class='stone' id ="duration-submit-btn" type="submit"  onclick="submitForm()">SUBMIT</button>
-
+                
+                <button class='stone' id ="duration-submit-btn" type="submit" form="movie-details">SUBMIT</button>
                 
             </form>
+            
 
             <!-- Results content -->
             <p class="stone" id="results">NOT SUCCESSFUL</p>
