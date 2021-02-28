@@ -37,11 +37,14 @@ $("#next-movie-search").on('click',function(e){
    
 })
 
-// var budget_selection_elem = document.getElementById("budget-selection");
-// budget_selection_elem.onchange = function(){
-//     $("#budget-phrase, #budget-selection, #budget-submit-btn").hide();
-//     $("#duration-phrase, #duration-submit-btn, #duration-selection").show();
+function submitForm() {
+  
+    var frm = $('form[name="movie-details"');
+    frm.submit(); // Submit the form
+    frm.reset();  // Reset all form data
+    return false; // Prevent page refresh
+ }
 
-// };
+
 
 

@@ -25,34 +25,40 @@
             <p class="stone" id="starting-phrase">Ready to predict?</p>
             <button class='stone' id ="prediction-submit-btn" type="button">PREDICT</button>
 
-            <!-- Budget phrase -->
-            <p class="stone" id="budget-phrase">What is your budget?</p>
-           
-            <!-- Budget options -->
-            <select name="budget" class='stone' id="budget-selection" name="budget-selection">
-                <option value="" selected>Choose Budget</option>
-                <option value="&lt100K">&lt100K</option>
-                <option value="100K-1M">100K-1M</option>
-                <option value="1M-10M">1M-10M</option>
-                <option value="10M-100M">10M-100M</option>
-                <option value="100M-1B">100M-1B</option>
-            </select>
-            <!-- Submit Budget -->
-            <button class='stone' id ="budget-submit-btn" type="button">NEXT</button>
-    
-            <!-- Duration phrase -->
-            <p class="stone" id="duration-phrase">What is the duration of the film?</p>
-            <!-- Duration Input -->
-            <input type="number" class='stone' id="duration-selection" name="quantity" min="30" max="50">
-            <!-- Submit Duration -->
-            <button class='stone' id ="duration-submit-btn" type="button">NEXT</button>
+            
+            <form name="movie-details" onclick="return false">
+
+                <!-- Budget phrase -->
+                <p class="stone" id="budget-phrase">What is your budget?</p>
+            
+                <!-- Budget options -->
+                <select name="budget" class='stone' id="budget-selection" name="budget-selection">
+                    <option value="" selected>Choose Budget</option>
+                    <option value="&lt100K">&lt100K</option>
+                    <option value="100K-1M">100K-1M</option>
+                    <option value="1M-10M">1M-10M</option>
+                    <option value="10M-100M">10M-100M</option>
+                    <option value="100M-1B">100M-1B</option>
+                </select>
+                <!-- Submit Budget -->
+                <button class='stone' id ="budget-submit-btn" type="button">NEXT</button>
+        
+                <!-- Duration phrase -->
+                <p class="stone" id="duration-phrase">What is the duration of the film?</p>
+                <!-- Duration Input -->
+                <input type="number" class='stone' id="duration-selection" name="quantity" min="30" max="50">
+                <!-- Submit Duration -->
+                <button class='stone' id ="duration-submit-btn" type="submit"  onclick="submitForm()">SUBMIT</button>
+
+                
+            </form>
 
             <!-- Results content -->
             <p class="stone" id="results">NOT SUCCESSFUL</p>
             <!-- Continue Button - allows you to Go back to the start  -->
-            <button class="stone" id="next-movie-search">CONTINUE</button>
+            <button class="stone" id="next-movie-search" type="reset">CONTINUE</button>
     
-            <!-- <button class='btn'>Ready</button> -->
+           
         </div>
     </div>
 
