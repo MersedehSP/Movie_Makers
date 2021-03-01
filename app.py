@@ -20,7 +20,7 @@ def modelResults():
     classifier = load('Final_ML_Model.joblib')
     result=classifier.predict(X)
     if (result==0):
-        outcome="Unsuccessful"
+        outcome="Not Successful"
     else:
         outcome="Successful"
     return outcome
