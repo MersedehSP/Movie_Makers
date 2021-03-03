@@ -38,6 +38,7 @@ We decided to use IMDB data from Kaggle, and first looked at the variables that 
   * 60-90min
   * 90-120min
   * >120min
+
 For the definition of success, we tested ratings of 6,7 and 8 as cut-offs for success. Defining it as 8 or more gave us the highest testing data score (0.89 or 89%).We discovered that our data has more unsuccessful movies, and to account for this, we balanced our model. Refer to "Final_ML_Model.ipynb"
 
 Given more time, we can add additional features such as genres, directors, production company, languages, etc.
