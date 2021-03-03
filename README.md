@@ -15,6 +15,14 @@ Select the budget(USD) and duration(minutes) range that most accurately describe
 4. Added a column with a '1' for movies with IMDB ratings of 8 or greater, '0' for movies with ratings lower than 8.
 
 ### Data analysis
+1. The cleaned data was analyzed in Jupyter notebook using Pandas and Matplotlib and a few other Python libraries. 
+2. First a few correlations were done between the IMDB rating and other parameters from the movie csv in order. Analysis of budget vs. IMDB showed that we needed to bin the budgets to better organize the data. These bins were used in the ML section.
+3. Using groupby, data was grouped based on budget, genre, year, etc. to make the following graphs:
+ * Total movie count base on budget
+ * Total movie count based on genre
+ * Movie count based on the top 5 genres
+ * Avg imdb rating for top 5 genres
+This was also the basis of the Tableau visualization.
 
 ### Machine Learning
 We decided to use IMDB data from Kaggle, and first looked at the variables that may correlate with the rating. Both the budget and duration are quantitative fields that have a slight positive correlation with the overall IMDB rating. We decided to bin the budget and duration according to ranges that are both easily understood by the users of our tool, as well as capturing the full range of our data. 
@@ -42,9 +50,6 @@ Given more time, we can add additional features such as genres, directors, produ
 ### HTML page with visualizations powered by Tableau
 1. Built a main page to allow user inputs of budget and duration ranges, and show the ML model's prediction
 2. Built an additional visualization page to show data analysis and key observations
-
-
-![demo](https://github.com/MersedehSP/Meetup_Project2/blob/main/video/demo.gif)
 
 ## Authors
 
