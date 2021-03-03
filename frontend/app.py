@@ -24,6 +24,12 @@ def modelResults():
     else:
         outcome="Successful"
     return outcome
+
+
+@app.route('/visuals')
+def visuals():
+
+    return render_template("visuals.html")
     
 if __name__=="__main__":
     app.run(debug=True)

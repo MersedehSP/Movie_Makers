@@ -131,6 +131,7 @@ h1{
     box-shadow:  0 0 65px 8px rgb(145, 224, 255) ;  
     top: 20vh;
     margin-top: 12vh;
+    cursor: pointer;
    
 }
 
@@ -143,4 +144,18 @@ h1{
 
 .modal-content > p {
     padding: 15px;
+}
+
+.container{
+   background-color: transparent;
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    top: 70vh;
+    box-shadow:0px 5px 10px wheat;
+    border-radius: 10%;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 25px;
+    color: wheat;
 }
