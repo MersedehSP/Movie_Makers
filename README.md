@@ -9,6 +9,10 @@ Select the budget(USD) and duration(minutes) range that most accurately describe
 ## How we built this application
 
 ### Data cleaning
+1. Sourced IMDB data from Kaggle and conducted the following data cleaning steps in a jupyter notebook.
+2. Decided to only consider U.S. movies so that there is no currency conversion necessary. Removed all non-U.S. and non-English movies.
+3. Noticed movies with missing or very low budgets, decided to remove all movies with budgets under $1000.
+4. Added a column with a '1' for movies with IMDB ratings of 8 or greater, '0' for movies with ratings lower than 8.
 
 ### Data analysis
 
@@ -31,9 +35,13 @@ For the definition of success, we tested ratings of 6,7 and 8 as cut-offs for su
 Given more time, we can add additional features such as genres, directors, production company, languages, etc.
 
 ### Flask API
+1. Imported the ML model and accepted inputs from webpage 
+2. Ran the inputs through the ML model
+3. Returned output "Successful" or "Unsuccesful" according to the model's prediction
 
 ### HTML page with visualizations powered by Tableau
-
+1. Built a main page to allow user inputs of budget and duration ranges, and show the ML model's prediction
+2. Built an additional visualization page to show data analysis and key observations
 
 
 ![demo](https://github.com/MersedehSP/Meetup_Project2/blob/main/video/demo.gif)
