@@ -58,9 +58,7 @@ $("#next-movie-search").on('click',function(e){
    
 })
 
-$("#visuals-btn").on('click', function(e){
-    $.get("/visuals")
-})
+
 
 
 
