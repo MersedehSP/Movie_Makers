@@ -24,6 +24,13 @@ Select the budget(USD) and duration(minutes) range that most accurately describe
  * Avg imdb rating for top 5 genres
 This was also the basis of the Tableau visualization.
 
+Links to Tableau Public:
+* IMDB Rating, Duration and Budget Correlations: https://public.tableau.com/views/IMDBCorrelationwithbudgetandduration_Final/Dashboard1[…]uage=en&:display_count=y&publish=yes&:origin=viz_share_link   
+* Genre Analysis:
+https://public.tableau.com/views/AnalysisofGenresOverTime_Final/Dashboard2?:language=en&:display_count=y&publish=yes&:origin=viz_share_link  
+* Successful vs. Unsuccessful Movies:
+https://public.tableau.com/views/Goodmovies_BadMovies_Final/Dashboard3?:language=en&:display_count=y&publish=yes&:origin=viz_share_link
+
 ### Machine Learning
 We decided to use IMDB data from Kaggle, and first looked at the variables that may correlate with the rating. Both the budget and duration are quantitative fields that have a slight positive correlation with the overall IMDB rating. We decided to bin the budget and duration according to ranges that are both easily understood by the users of our tool, as well as capturing the full range of our data. 
 * Budget - 
