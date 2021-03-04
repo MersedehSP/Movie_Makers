@@ -27,18 +27,10 @@ This was also the basis of the Tableau visualization.
 ### Machine Learning
 We decided to use IMDB data from Kaggle, and first looked at the variables that may correlate with the rating. Both the budget and duration are quantitative fields that have a slight positive correlation with the overall IMDB rating. We decided to bin the budget and duration according to ranges that are both easily understood by the users of our tool, as well as capturing the full range of our data. 
 * Budget - 
-  * <100K
-  * 100K-1M
-  * 1M-10M
-  * 10M-100M
-  * 100M-1B
+  * <100K, 100K-1M, 1M-10M, 10M-100M, 100M-1B
 * Duration - 
-  * <30min
-  * 30-60min
-  * 60-90min
-  * 90-120min
-  * >120min
-
+  * <30min, 30-60min, 60-90min, 90-120min, >120min
+  
 For the definition of success, we tested ratings of 6,7 and 8 as cut-offs for success. Defining it as 8 or more gave us the highest testing data score (0.89 or 89%).We discovered that our data has more unsuccessful movies, and to account for this, we balanced our model. Refer to "Final_ML_Model.ipynb"
 
 Given more time, we can add additional features such as genres, directors, production company, languages, etc.
@@ -56,7 +48,7 @@ Given more time, we can add additional features such as genres, directors, produ
 
 * **Brian Regan** - *Data sourcing and cleaning* - [bregan78](https://github.com/bregan78)
 * **Joseph Lubrano** - *Flask* - [jlubranos](https://github.com/jlubranos)
-* **Mersedeh Saniepay** - *Data analysis and visualizations * - [MersedehSP](https://github.com/MersedehSP)
+* **Mersedeh Saniepay** - *Data analysis and visualizations* - [MersedehSP](https://github.com/MersedehSP)
 * **Veena Uppalapati** - *Webpage design* - [veenauppalapati](https://github.com/veenauppalapati)
 * **Ramyata Upmaka** - *Machine learning* - [rambunctious2050](https://github.com/rambunctious2050)
 
