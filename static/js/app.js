@@ -34,7 +34,7 @@ $("#movie-details").submit(function(e){
     // console.log("Budget :",budget);
     // console.log("Duration Selection :",duration);
     $.post("/modelResults",{"inputData":inputData}).done(function(data){
-        // console.log("Movie wil be :",data);
+        $("#results").empty()
         $("#results").append(data)
     });
    
