@@ -25,7 +25,7 @@ Select the budget(USD) and duration(minutes) range that most accurately describe
 This was also the basis of the Tableau visualization.
 
 Links to Tableau Public:
-* IMDB Rating, Duration and Budget Correlations: https://public.tableau.com/views/IMDBCorrelationwithbudgetandduration_Final/Dashboard1[…]uage=en&:display_count=y&publish=yes&:origin=viz_share_link   
+* IMDB Rating, Duration and Budget Correlations: https://public.tableau.com/views/IMDBCorrelationwithbudgetandduration_Final/Dashboard1?:language=en&:display_count=y&:origin=viz_share_link  
 * Genre Analysis:
 https://public.tableau.com/views/AnalysisofGenresOverTime_Final/Dashboard2?:language=en&:display_count=y&publish=yes&:origin=viz_share_link  
 * Successful vs. Unsuccessful Movies:
@@ -38,6 +38,7 @@ We decided to use IMDB data from Kaggle, and first looked at the variables that 
 * Duration - 
   * <30min, 30-60min, 60-90min, 90-120min, >120min
   
+
 For the definition of success, we tested ratings of 6,7 and 8 as cut-offs for success. Defining it as 8 or more gave us the highest testing data score (0.89 or 89%).We discovered that our data has more unsuccessful movies, and to account for this, we balanced our model. Refer to "Final_ML_Model.ipynb"
 
 Given more time, we can add additional features such as genres, directors, production company, languages, etc.
