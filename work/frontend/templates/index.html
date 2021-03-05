@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Sorcerer</title>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    
+    <!-- Globe content -->
+    <div class="image-container">
+
+        <!-- Globe  image -->
+        <img class="circle-img" src="../static/images/blue-grunge-free-vector-texture.jpg">
+        <!-- Globe  transparent cover -->
+        <div class='circle-cover'></div>
+
+        <!-- Globe text -->
+        <div class='stone-content'>
+
+            <!-- Initial startup content -->
+            <p class="stone" id="starting-phrase">Ready to predict?</p>
+            <button class='stone' id ="prediction-submit-btn" type="button">PREDICT</button>
+
+            
+            <form id="movie-details">
+
+                <!-- Budget phrase -->
+                <p class="stone" id="budget-phrase">What is your budget?</p>
+            
+                <!-- Budget options -->
+                <select class='stone' id="budget-selection">
+                    <option value="0">0 - 100k</option>
+                    <option value="1">100k - 1 million</option>
+                    <option value="2">1 million - 10 million</option>
+                    <option value="3">10 million - 100 million</option>
+                    <option value="4">100 million - 1 Billion</option>
+                </select>
+                <!-- Submit Budget -->
+                <button class='stone' id ="budget-submit-btn" type="button">NEXT</button>
+        
+                <!-- Duration phrase -->
+                <p class="stone" id="duration-phrase">What is the duration of the film?</p>
+                <!-- Duration Input -->
+                <select id="duration-selection">
+                    <option value="5">0 - 30</option>
+                    <option value="6">30 - 60</option>
+                    <option value="7">60 - 90</option>
+                    <option value="8">90 - 120</option>
+                    <option value="9">120 - 305</option>
+                </select>
+                <!-- Submit Duration -->
+                
+                <button class='stone' id ="duration-submit-btn" type="submit" form="movie-details">SUBMIT</button>
+                
+            </form>
+            
+
+            <!-- Results content -->
+            <p class="stone" id="results"></p>
+            <!-- Continue Button - allows you to Go back to the start  -->
+            <button class="stone" id="next-movie-search" type="reset">CONTINUE</button>
+    
+           
+        </div>
+    </div>
+
+    <!-- About content -->
+    <div class="content-holder">
+        <h1>Movie Sorcerer</h1>
+        <p class="about" style="font-size: 3vh;">You may be the next great filmmaker in Hollywood, and we want to help you take La La Land by storm! 
+            Select the budget(USD) and duration(minutes) range that most accurately describe your movie, and we will predict whether your movie will be successful (IMDB rating of 8 or more) or not.
+            Our machine learning model uses logistic regression to make predictions based on historical IMDB data with 90% accuracy. 
+        </p>
+        
+        <button class="stone" id="visuals-btn"><a href="{{url_for('visuals')}}">VISUALS</a></button>
+
+    </div>
+
+
+    
+
+    <script src="../static/js/app.js"></script>
+    
+
+   
+</body>
+</html>
