@@ -1,9 +1,11 @@
 
 # Movie Makers
 
-If you've ever wondered how to make a successful movie, we'd like to introduce you to the Movie Makers machine learning (ML) application that predicts whether your movie will be successful in the eye's of the audience based on it's budget and duration. This predictor was built using a logistic regression model and IMDB data sourced from Kaggle. The application assumes that an IMDB rating of 8 or higher out of 10 is a "successful" movie. You may the next great filmmaker in Hollywood, and we want to help you take La La Land by storm! Of course, there are several other factors that lead to a well-received film, but as a start you can guage how the duration and budget of your movie may predict its sucess. The data spans over 10,000 movies in the IMDB reaching as far back as the 1910s! We also provide visualizations to help you understand the movie landscape, for example, which genre is successful, how these trends changed over time, etc.
+If you've ever wondered how to make a successful movie, we'd like to introduce you to the Movie Makers machine learning (ML) application that predicts whether your movie will be successful in the eye's of the audience based on it's budget and duration. This predictor was built using a logistic regression model and IMDB data sourced from Kaggle. The application assumes that an IMDB rating of 8 or higher out of 10 is a "successful" movie. You may the next great filmmaker in Hollywood, and we want to help you take La La Land by storm! Of course, there are several other factors that lead to a well-received film, but as a start you can gauge how the duration and budget of your movie may predict its success. The data spans over 10,000 movies in the IMDB reaching as far back as the 1910s! We also provide visualizations to help you understand the movie landscape, for example, which genre is successful, how these trends changed over time, etc.
 
 ## How to use this application
+First you need to clone this repo to your local drive. Then open your terminal and activate PythonData. then run app.py by Python.
+
 Select the budget(USD) and duration(minutes) range that most accurately describe your movie, and we will predict whether your movie will be successful (IMDB rating of 8 or more) or not. Our machine learning model uses logistic regression to make predictions based on historical IMDB data with 90% accuracy.
 
 ## How we built this application
@@ -46,7 +48,7 @@ Given more time, we can add additional features such as genres, directors, produ
 ### Flask API
 1. Imported the ML model and accepted inputs from webpage 
 2. Ran the inputs through the ML model
-3. Returned output "Successful" or "Unsuccesful" according to the model's prediction
+3. Returned output "Successful" or "Unsuccessful" according to the model's prediction
 
 ### HTML page with visualizations powered by Tableau
 1. Built a main page to allow user inputs of budget and duration ranges, and show the ML model's prediction
